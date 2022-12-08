@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import mysql.connector
 
 class Book:
@@ -41,7 +43,7 @@ class Book:
         self.cursor.execute(sql)
         self.connection.commit()
 
-book = Book(host="localhost", user="MyUser", password="MainPassword", database="Store")
+#book = Book(host="localhost", user="MyUser", password="MainPassword", database="Store")
 #book.create("Clean Code: A Handbook of Agile Software Craftsmanship", "Robert C. Martin")
 #book.create("Clean Architecture: A Craftsmans Guide to Software Structure and Design", "Robert C. Martin")
 #book.create("Design Patterns: Elements Of Reusable Object-oriented Software - Importado - Ingles", "Erich Gamma")

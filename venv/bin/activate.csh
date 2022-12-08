@@ -18,7 +18,7 @@ setenv PATH "$VIRTUAL_ENV:q/bin:$PATH:q"
 
 
 if ('' != "") then
-    set env_name = ''
+    set env_name = '() '
 else
     set env_name = '('"$VIRTUAL_ENV:t:q"') '
 endif
