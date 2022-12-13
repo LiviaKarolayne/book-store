@@ -28,13 +28,25 @@ class Book:
             )
         return books
 
+    def read(self, id):
+        book = dict()
+        sql = f"SELECT * FROM books WHERE id={id}"
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+
+        book["id"] = data[0][0]
+        book["title"] = data[0][1]
+        book["author"] = data[0][2]
+
+        return book 
+
     def create(self, tilte, author):
         sql = f"INSERT INTO books (title, author) VALUES ('{tilte}', '{author}')"
         self.cursor.execute(sql)
         self.connection.commit()
 
-    def remove(self, tilte, author):
-        sql = f"DELETE FROM books WHERE title='{tilte}' AND author='{author}'"
+    def delete(self, id):
+        sql = f"DELETE FROM books WHERE id={id}"
         self.cursor.execute(sql)
         self.connection.commit()
 
@@ -49,9 +61,11 @@ class Book:
 #book.create("Design Patterns: Elements Of Reusable Object-oriented Software - Importado - Ingles", "Erich Gamma")
 #book.create("Computer Networking: A Top-Down Approach", "James Kurose")
 #book.create("title", "author")
-#book.remove(tilte="title", author="author")
+#book.delete(id=1)
 #book.update("14", "title2", "author2")
 #books = book.read_all()
+#book = book.read(id=1)
+#print(book)
 #print(books)
 
 

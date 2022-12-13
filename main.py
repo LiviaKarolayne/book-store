@@ -3,6 +3,12 @@
 from db import Book
 from app import App
 
-book = Book(host="localhost", user="MyUser", password="MainPassword", database="Store")
+HOST="localhost"
+USER="MyUser"
+PASSWORD="MainPassword"
+DATABASE="Store"
+
+book = Book(host=HOST, user=USER, password=PASSWORD, database=DATABASE)
+
 app = App(book)
 app.run(debug=True)

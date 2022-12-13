@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-family: sans-serif;
+}
+
+form {
+}
+
+input {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+table {
+    margin: 20px 0;
+    border: 1px solid #000;
+}
+
+tr {
+   
+}
+
+th, td {
+    margin: 8px 16px;
+    padding: 4px 8px;
+    border: 1px solid #000;
+}
+
+td.action {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.btn-primary {
+    background: #0069D9;
+    color: #FFF;
+}
+
+.btn-secondary {
+    background: #5A6268;
+    color: #FFF;
+}
+
+.btn-success {
+    background: #218838;
+    color: #FFF;
+}
+
+.btn-danger {
+    background: #C82333;
+    color: #FFF;
+}
+
+.btn-warning {
+    background: #E0A800;
+    color: #FFF;
+}
+
+.btn-info {
+    background: #138496;
+    color: #FFF;
+}
+
+.btn-light {
+    background: #E2E6EA;
+}
+
+.btn-dark {
+    background: #23272B;
+    color: #FFF;
+}
+
+.btn-link {
+    color: #0069D9;
+}
