@@ -1,31 +1,35 @@
-{% extends "base_header.html" %}
+{% extends "base.html" %}
 
 {% block head_page %}
     <title>Book Store - {{ request_type }} Book</title>
 {% endblock %}
 
 {% block content %}
-    <h1>{{ request_type }} Book</h1>
-
-    <form action="/set_book" method="post">
-        <div>
-            <input style="display: none;" type="text" name="request_type" value='{{ request_type }}'>
-            <input style="display: none;" type="text" name="id" value='{{ book["id"] }}'>
-        </div>
+    <main>
+        <section class="form-section">
+            <form class="form" action="/set_book" method="post">
+                <h2>{{ request_type }} Book</h2>
         
-        <div>
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" value='{{ book["title"] }}'>
-        </div>
+                <div>
+                    <input class="display-none" type="text" name="request_type" value='{{ request_type }}'>
+                    <input class="display-none" type="text" name="id" value='{{ book["id"] }}'>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="title" value='{{ book["title"] }}'>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input class="form-control" type="text" id="author" name="author" value='{{ book["author"] }}'>
+                </div>        
         
-        <div>
-            <label for="author">Author</label>
-            <input type="text" id="author" name="author" value='{{ book["author"] }}'>
-        </div>        
-
-        <div>
-            <a href="/list_books" title="Cancel">Cancel</a>
-            <input class="btn btn-primary" type="submit" value="{{ request_type }}" />
-        </div>
-    </form>    
+                <div class="form-check">
+                    <a class="btn btn-danger" href="/list_books" title="Cancel">Cancel</a>
+                    <input class="btn btn-primary" type="submit" value="{{ request_type }}" />
+                </div>
+            </form>
+        </section>
+    </main>
 {% endblock %}

@@ -5,33 +5,41 @@
 {% endblock %}
 
 {% block content %}
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Author</th>
-            <th>Action</th>
-        </tr>
-        {% for book in books %}
-            <tr>
-                <td>{{ book["title"] }}</td>
-                <td>{{ book["author"] }}</td>
-                <td class="action">
-                    <form action="/form_book" method="post">
-                        <input style="display: none;" type="text" name="request_type" value="Edit"/>
-                        <input style="display: none;" type="text" name="id" value='{{ book["id"] }}'/>
-                        <input class="btn btn-warning" type="submit" value="Edit">
-                    </form>
-
-                    <form action="/delete_book" method="post">
-                        <input style="display: none;" type="text" name="id" value='{{ book["id"] }}'/>
-                        <input class="btn btn-danger" type="submit" value="Delete">
-                    </form>
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
-    <form action="/form_book" method="post">
-        <input style="display: none;" type="text" name="request_type" value="Create"/>
-        <input class="btn btn-primary" type="submit" value="Create new book">
-    </form>
+    <main class="bg-light center-horizontal">
+        <section class="content-section wide-section">
+            <h1 class="title">List Books</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+                {% for book in books %}
+                    <tr>
+                        <td>{{ book["title"] }}</td>
+                        <td>{{ book["author"] }}</td>
+                        <td>
+                            <div class="action">
+                                <form action="/form_book" method="post">
+                                    <input style="display: none;" type="text" name="request_type" value="Edit"/>
+                                    <input style="display: none;" type="text" name="id" value='{{ book["id"] }}'/>
+                                    <input class="btn btn-warning" type="submit" value="Edit">
+                                </form>
+            
+                                <form action="/delete_book" method="post">
+                                    <input style="display: none;" type="text" name="id" value='{{ book["id"] }}'/>
+                                    <input class="btn btn-danger" type="submit" value="Delete">
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <form action="/form_book" method="post">
+                <input style="display: none;" type="text" name="request_type" value="Create"/>
+                <input class="btn btn-primary" type="submit" value="Create new book">
+            </form>
+        </section>
+    </main>
+    
 {% endblock %}

@@ -9,13 +9,44 @@
     {% block head_page %}
     {% endblock %}
 </head>
-<body class="body-main">
+<body>
     <!--  -->
-    <header class="container-menu">
+    <header class="header">
         <a href="/" title="Home">Home</a>
         <a href="/list_books" title="List Books">List Books</a>
     </header>
     {% block content %}
     {% endblock %}
+    <footer class="footer">
+        <section>
+            <div>
+                <h1>logo</h1>
+                <h5>Descrição</h5>
+            </div>
+            <div>
+                <h3>Menu</h3>
+                <div class="links">
+                    <a href="/" title="Home">Home</a>
+                    <a href="/list_books" title="List Books">List Books</a>
+                </div>
+            </div>
+            <div>
+                <h3>Follow us</h3>
+                <div class="links">
+                    <a href="#" title="Facebook">Facebook</a>
+                    <a href="#" title="Twitter">Twitter</a>
+                    <a href="#" title="Instagram">Instagram</a>
+                </div>
+            </div>
+            <div>
+                <h3>Contact us</h3>
+                <h5>E-mail</h5>
+                <span>contact@bookestore.br</span>
+            </div>
+        </section>
+        <div class="copyhigt">
+            <span>&copy copyhigt 2022 - Lívia Karolayne de Mesquita Oliveira</span>
+        </div>
+    </footer>
 </body>
 </html>
