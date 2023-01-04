@@ -388,7 +388,7 @@ td .action {
 
 .home-section {
     display: flex;
-    height: 70vh;
+    min-height: 40vh;
     padding: 0 60px;
     justify-content: space-between;
     overflow: visible;
@@ -647,18 +647,6 @@ td .action {
     .header .links {
         display: none;
     }
-}
-
-@media screen and (max-width: 400px) {
-    th, 
-    td,
-    td .action *{ 
-        font-size: .65rem;
-    }
-
-    td .action { 
-        flex-wrap: wrap;
-    }
 
     .footer section {
         flex-direction: column;
@@ -683,9 +671,21 @@ td .action {
     .footer section > div > *:not(:first-child) * {
         font-size: .5rem;
     }
+}
+
+@media screen and (max-width: 400px) {
+    th, 
+    td,
+    td .action *{ 
+        font-size: .65rem;
+    }
+
+    td .action { 
+        flex-wrap: wrap;
+    }
 
     .home-section {
-        height: 50vh;
+        height: 55vh;
     }
 
     .form { 
