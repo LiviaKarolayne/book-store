@@ -12,26 +12,40 @@
 <body>
     <!--  -->
     <header class="header">
-        <a href="/" title="Home">Home</a>
-        <a href="/list_books" title="List Books">List Books</a>
+        <div class="logo">
+            <h1>Logo</h1>
+        </div>
+        <input id="toggle-button" class="toggle-button" type="checkbox"/>
+        <label class="toggle-menu" for="toggle-button">
+            <div class="menu">
+                <span class="icon"></span>
+            </div>
+            <div class="links">
+                <a href="/" title="Home">Home</a>
+                <a href="/list_books" title="List Books">List Books</a>
+            </div>
+        </label>
+        
+        <div class="info">
+        </div>        
     </header>
     {% block content %}
     {% endblock %}
     <footer class="footer">
         <section>
             <div>
-                <h1>logo</h1>
+                <h2>Logo</h2>
                 <h5>Descrição</h5>
             </div>
             <div>
-                <h3>Menu</h3>
+                <h4>Menu</h4>
                 <div class="links">
                     <a href="/" title="Home">Home</a>
                     <a href="/list_books" title="List Books">List Books</a>
                 </div>
             </div>
             <div>
-                <h3>Follow us</h3>
+                <h4>Follow us</h4>
                 <div class="links">
                     <a href="#" title="Facebook">Facebook</a>
                     <a href="#" title="Twitter">Twitter</a>
@@ -39,7 +53,7 @@
                 </div>
             </div>
             <div>
-                <h3>Contact us</h3>
+                <h4>Contact us</h4>
                 <h5>E-mail</h5>
                 <span>contact@bookestore.br</span>
             </div>

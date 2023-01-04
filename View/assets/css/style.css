@@ -10,6 +10,7 @@
     background: none;
     outline: none;
     font-family: sans-serif;
+    
 }
 
 :root {
@@ -24,6 +25,30 @@
     --light: #E2E6EA;
     --dark: #23272B;
     --white: #FFF;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.16rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5, p, span, a {
+    font-size: .85rem;
+}
+
+h6 {
+    font-size: .7rem;
 }
 
 a:hover {
@@ -48,8 +73,103 @@ th, td {
 
 td .action {
     display: flex;
-    gap: 10px;
     justify-content: center;
+    gap: 10px;  
+}
+
+.toggle-menu .menu,
+.toggle-button {
+    display: none;
+}
+
+.header {
+    display: flex;
+    height: 8vh;
+    padding: 2.5vw 6vw;
+    align-items: center;
+    gap: 10px;
+    background: var(--light);
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.header .logo {
+    width: 30vw;
+}
+
+.header .links {
+    display: flex;
+    width: 40vw;
+    justify-content: center;
+}
+
+.header .links * {
+    font-size: 1rem;
+}
+
+.header .info {
+    width: 30vw;
+    text-align: right;
+}
+
+.header  * {
+    color: #000;
+}
+
+.header .links a {
+    position: relative;
+    padding: 4px 10px;
+}
+
+.header .links > a:not(:first-child)::before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 2px;
+    top: 2px;
+    left: -1px;
+    background: rgba(0,0,0,0.2);
+}
+
+.footer section {
+    display: flex;
+    background: var(--dark);
+}
+
+.footer section * {
+    color: #FFF;
+}
+
+.footer section a:hover {
+    color: var(--primary);
+}
+
+.footer section > *,
+.footer section .links {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw; 
+}
+
+.footer section > * {
+    padding: 3.5vw 3vw 3.5vw 3vw;
+}
+
+.footer section > *:first-child {
+    width: 31vw; 
+}
+
+.footer section > *:not(:first-child) {
+    width: 23vw;
+}
+
+.footer section > * > *:first-child  {
+    margin: 1vw 0;
+}
+
+.footer .copyhigt {
+    width: 100vw;
+    padding: 8px 3vw;
+    background: var(--gray);
 }
 
 .display-none {
@@ -95,8 +215,67 @@ td .action {
     width: 40%;
 }
 
+.content-section {
+    padding: 4vw 0;
+}
+
+.content-section .title {
+    margin-bottom: 30px 0;
+}
+
 .bg-light {
     background: var(--light);
+}
+
+.form-section {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--gray);
+}
+
+.form {
+    width: 40%;
+    margin: 20px 0;
+    padding: 100px 0;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.form * {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 40px;
+}
+
+.form-group > label {
+    margin-bottom: 5px;
+    align-self: flex-start;
+    font-size: .9rem;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border: none;
+    border: 2px solid var(--dark);    
+}
+
+.form-check {
+    margin-top: 30px;
+    gap: 5px;
 }
 
 .btn {
@@ -207,123 +386,18 @@ td .action {
     text-decoration: underline;
 }
 
-.form-section {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: var(--dark-blue);
-}
-
-.form {
-    width: 40%;
-    margin: 20px 0;
-    padding: 100px 0;
-    border-radius: 15px;
-    background: #FFF;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-}
-
-.form * {
-    display: flex;
-    justify-content: center;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 40px;
-}
-
-.form-group > label {
-    margin-bottom: 5px;
-    align-self: flex-start;
-    font-size: .9rem;
-}
-
-.form-control {
-    padding: 10px;
-    border: 1px solid var(--gray);
-    border-radius: 5px;
-}
-
-.form-control:focus {
-    border: none;
-    border: 2px solid var(--dark);    
-}
-
-.form-check {
-    margin-top: 30px;
-    gap: 5px;
-}
-
-.header {
-    display: flex;
-    height: 8vh;
-    align-items: center;
-    padding: 0 60px;
-    gap: 15px;
-    background: var(--dark);
-}
-
-.header > * {
-    color: #FFF;
-}
-
-.footer section {
-    display: flex;
-    background: var(--dark);
-}
-
-.footer section * {
-    color: #FFF;
-}
-
-.footer section a:hover {
-    color: var(--primary);
-}
-
-.footer section > *,
-.footer section .links {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.footer section > * {
-    padding: 10px 3vw 20px 3vw;
-}
-
-.footer section > *:first-child {
-    width: 31vw; 
-}
-
-.footer section > *:not(:first-child) {
-    width: 23vw;
-}
-
-.footer section > * > *:first-child  {
-    margin: 10px 0;
-}
-
-.footer .copyhigt {
-    width: 100vw;
-    padding: 8px 3vw;
-    background: var(--gray);
-}
-
 .home-section {
     display: flex;
-    height: 85vh;
+    height: 70vh;
     padding: 0 60px;
     justify-content: space-between;
-    background: var(--dark-blue);
+    overflow: visible;
+    align-items: center;
+    background: var(--light);
 }
 
 .store {
     margin-left: 8vw;
-    align-self: center;
 }
 
 .store .title {
@@ -340,6 +414,7 @@ td .action {
     top: -3vw; 
     font-size: 12vw;
 }
+
 .store .title::before {
     content: "B";
     right: 3vw;
@@ -372,9 +447,8 @@ td .action {
 .books {
     position: relative;
     width: 26.5vw;
-    height: 72vh;
+    height: 35vw;
     align-self: flex-end;
-    /*border: 1px solid red;*/
 }
 
 .bookA,
@@ -386,13 +460,13 @@ td .action {
     bottom: 10px;
     align-items: center;
     justify-content: center;
-    border: 3px solid #000;
+    border: .3vw solid #000;
     box-shadow: 6px 10px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .bookA {
     width: 7vw;
-    height: 50vh;
+    height: 20vw;
     left: 0vw;
     background: var(--red);
     border-radius: 10px;
@@ -401,7 +475,7 @@ td .action {
 
 .bookB {
     width: 4vw;
-    height: 70vh;
+    height: 30vw;
     left: 7.9vw;
     border-radius: 5px;
     background: var(--green);
@@ -409,7 +483,7 @@ td .action {
 
 .bookC {
     width: 7vw;
-    height: 64vh;
+    height: 28vw;
     left: 12.1vw;
     border-radius: 20px;
     background: var(--secondary);
@@ -417,7 +491,7 @@ td .action {
 
 .bookD {
     width: 7vw;
-    height: 70vh;
+    height: 30vw;
     left: 19.3vw;
     border-radius: 10px;
     background: var(--primary);
@@ -446,7 +520,7 @@ td .action {
 .bookD .down-line::before {
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: .3vw;
     background: #000;
 }
 
@@ -497,14 +571,178 @@ td .action {
     bottom: 2vh;
 }
 
-.content-section {
-    min-height: 65vh;
+@media screen and (max-width: 600px) { 
+    .toggle-menu .menu {
+        display: block;
+        position: absolute;
+        top: 2vh;
+        right: 6vw;
+        width: 5vh;
+        height: 4.5vh;
+        border-radius: 8px;
+        background: #000;
+    }
+    
+    .toggle-menu .icon {
+        position: absolute;
+        top: 2.15vh;
+        left: 1.3vh;
+        width: 2.5vh;
+        height: .2vh;
+        background: #FFF;
+        transition: 0.5s ease-in-out;
+    }
+      
+    .toggle-menu .icon:before,
+    .toggle-menu .icon:after {
+        position: absolute;
+        content: '';
+        width: 2.5vh;
+        height: .2vh;
+        background: #FFF;
+        transition: 0.5s ease-in-out;
+    }
+      
+    .toggle-menu .icon:before {
+        top: -6px;
+    }
+      
+    .toggle-menu .icon:after {
+        bottom: -6px;
+    }
+      
+    .toggle-button:checked ~ .toggle-menu .icon {
+        transform: rotate(45deg);
+    }
+      
+    .toggle-button:checked ~ .toggle-menu .icon:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+      
+    .toggle-button:checked ~ .toggle-menu .icon:after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+    
+    .toggle-button:checked ~ .toggle-menu .links {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 8vh;
+        left: 0;
+        background: var(--light);
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+
+    .toggle-button:checked ~ .toggle-menu .links * {
+        display: block;
+        
+    }
+
+    .header { 
+        justify-content: space-between;
+    }
+
+    .header .links {
+        display: none;
+    }
 }
 
-.content-section .title {
-    margin: 30px 0;
-}
+@media screen and (max-width: 400px) {
+    th, 
+    td,
+    td .action *{ 
+        font-size: .65rem;
+    }
 
+    td .action { 
+        flex-wrap: wrap;
+    }
+
+    .footer section {
+        flex-direction: column;
+    }
+
+    .footer section > * {
+        width: 100vw !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer section > div > *:first-child {
+        font-size: .9rem;
+    }
+
+    .footer section > div > *:not(:last-child, :first-child),
+    .footer .copyhigt * {
+        font-size: .6rem;
+    }
+
+    .footer section > div > *:last-child,
+    .footer section > div > *:not(:first-child) * {
+        font-size: .5rem;
+    }
+
+    .home-section {
+        height: 50vh;
+    }
+
+    .form { 
+        width: 70%;
+    }
+
+
+    .books {
+        align-self: center;
+    }
+
+    .bookA .down-line {
+        bottom: 1vh;
+    }
+
+    .bookB .top-circle,
+    .bookB .down-circle {
+        width: .8vh;
+        height: .8vh;
+    }
+
+    .bookB .top-line {
+        top: 2vh;
+    }
+    
+    .bookB .down-line {
+        bottom: 2vh;
+    }
+
+    .bookA .down-line::after,
+    .bookD .top-line::after {
+        top: .6vh;
+    }
+
+    .bookA .down-line::before,
+    .bookD .down-line::before {
+        bottom: .6vh;
+    }
+
+    .bookB .top-circle,
+    .bookD .top-line {
+        top: .6vh;
+    }
+
+    .bookB .down-circle,
+    .bookD .down-line {
+        bottom: .6vh;
+    }
+
+    .bookA .title,
+    .bookB .title,
+    .bookC .title,
+    .bookD .title {
+        font-size: .4rem;
+    }
+
+}
 
 
 
