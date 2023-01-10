@@ -19,6 +19,11 @@ O escopo do projeto é uma loja de livros. Ele foi criado para treinar a integra
 * Docker
 * Kubernetes
 
+## Pré-requisitos
+* Instalar docker
+* Instalar kubernetes
+* Instalar minukube
+
 ## Instalação
 ``` console
 git clone https://github.com/LiviaKarolayne/book_store.git
