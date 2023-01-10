@@ -1,11 +1,39 @@
 # book_store
-Uma aplicação web para loja de livros utilizando banco de dados, flask e kubernets.
 
-minikube image load db
+O escopo do projeto é uma loja de livros. Ele foi criado para treinar a integração entre uma aplicação web, conexão a banco de dados e entrega de serviços em VNF.
 
-sudo docker build -t livia/mysql:1.0 .
-sudo docker build -t livia/book-store:1.0 .
+<img src="./docs/img/get-ip-node.gif"/>
+<img src="./docs/img/access-book-store.gif"/>
 
-sudo docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=RootPassword -e MYSQL_DATABASE=Store -e MYSQL_USER=MyUser -e MYSQL_PASSWORD=MainPassword livia/mysql:1.0
+## Tecnologias utilizadas
+### Aplicação web
+* Flask
+* MySQL Connector Lib
+* HTML
+* CSS
 
-sudo docker run -d -p 5000:5000 livia/book-store:1.0
+### Banco de dados
+* MySQL
+
+### Serviço
+* Docker
+* Kubernetes
+
+## Instalação
+``` console
+git clone https://github.com/LiviaKarolayne/book_store.git
+cd book_store/
+./util/init.sh
+```
+<img src="./docs/img/installation.gif"/>
+<img src="./docs/img/get-pods.gif"/>
+<img src="./docs/img/get-svcs.gif"/>
+
+## Access Book Store App
+``` console
+kubectl get nodes -o wide
+curl <IP Address>:30500
+```
+⚠️ Projeto em construção
+
+⚠️ As vulnerabilidades de segurança ainda não foram tratadas
