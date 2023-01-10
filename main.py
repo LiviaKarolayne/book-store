@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
-from db import Book
+import sys
+
+from db.db import Book
 from app import App
 
-HOST="localhost"
-USER="MyUser"
-PASSWORD="MainPassword"
+HOST="10.98.208.24"
+USER="root"
+PASSWORD="RootPassword"
 DATABASE="Store"
 
 book = Book(host=HOST, user=USER, password=PASSWORD, database=DATABASE)
 
-app = App(book)
-app.run(debug=True)
+app = App(book).run(host="0.0.0.0")

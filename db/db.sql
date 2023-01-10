@@ -1,3 +1,4 @@
+CREATE DATABASE Store;
 USE Store;
 
 CREATE TABLE books (

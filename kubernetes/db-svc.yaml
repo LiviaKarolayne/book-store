@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-svc
+spec:
+  type: ClusterIP
+  clusterIP: 10.98.208.24
+  ports:
+    - port: 3306
+  selector:
+    app: db
