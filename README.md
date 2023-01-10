@@ -1,4 +1,4 @@
-# book_store
+# Book Store
 
 O escopo do projeto é uma loja de livros. Ele foi criado para treinar a integração entre uma aplicação web, conexão a banco de dados e entrega de serviços em VNF.
 
