@@ -5,6 +5,9 @@ O escopo do projeto é uma loja de livros. Ele foi criado para treinar a integra
 <img src="./docs/img/get-ip-node.gif"/>
 <img src="./docs/img/access-book-store.gif"/>
 
+## Arquitetura
+<img src="./docs/img/architecture.png"/>
+
 ## Tecnologias utilizadas
 ### Aplicação web
 * Flask
