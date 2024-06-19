@@ -44,6 +44,5 @@ cd book_store/
 kubectl get nodes -o wide
 curl <IP Address>:30500
 ```
-⚠️ Project under construction
 
 ⚠️ Security vulnerabilities have not yet been addressed
