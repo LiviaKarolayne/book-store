@@ -1,33 +1,35 @@
 # Book Store
 
-O escopo do projeto é uma loja de livros. Ele foi criado para treinar a integração entre uma aplicação web, conexão a banco de dados e entrega de serviços em VNF.
+![Under Construction](https://img.shields.io/badge/🚧%20under%20construction-grey?style=for-the-badge)
+
+The scope of the project is a bookstore. It was created to train the integration between a web application, database connection and service delivery in VNF.
 
 <img src="./docs/img/get-ip-node.gif"/>
 <img src="./docs/img/access-book-store.gif"/>
 
-## Arquitetura
+## Architecture
 <img src="./docs/img/architecture.png"/>
 
-## Tecnologias utilizadas
-### Aplicação web
+## Technologies used
+### Web application
 * Flask
 * MySQL Connector Lib
 * HTML
 * CSS
 
-### Banco de dados
+### Database
 * MySQL
 
-### Serviço
+### Infra
 * Docker
 * Kubernetes
 
-## Pré-requisitos
-* Instalar docker
-* Instalar kubernetes
-* Instalar minukube
+## Prerequisites
+* Install docker
+* Install kubernetes
+* Install minikube
 
-## Instalação
+## Installation
 ``` console
 git clone https://github.com/LiviaKarolayne/book_store.git
 cd book_store/
@@ -42,6 +44,6 @@ cd book_store/
 kubectl get nodes -o wide
 curl <IP Address>:30500
 ```
-⚠️ Projeto em construção
+⚠️ Project under construction
 
-⚠️ As vulnerabilidades de segurança ainda não foram tratadas
+⚠️ Security vulnerabilities have not yet been addressed
